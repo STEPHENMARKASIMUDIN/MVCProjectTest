@@ -1,0 +1,6 @@
+/Web References
+/bin
+/Content
+/Scripts/*.min.js
+Web.config
+/obj

@@ -1,0 +1,57 @@
+﻿@model DebitCreditMemo.Models.LoginViewModel
+@{
+    ViewBag.Title = "Debit/Credit Memo";
+    Layout = "~/Views/Login/_LoginLayout.cshtml";
+    var sss = TempData["Auth"];
+    string message = "";
+    if (sss.ToString() == "false")
+    {
+        message = "Incorrect username/password.";
+    }
+    else
+    {
+        message = "";
+    }
+    var Url = @Request.ApplicationPath;
+    if (Url == "/DebitCreditMemo") 
+        Url = "/DebitCreditMemo/Login/Authorize";
+    else 
+        Url = "Login/Authorize";
+    
+}
+<div class="card-login boxShadow card">
+    <div class="card-body pad-12">
+        <form action=@Url method="post">
+        @*@using (Ajax.BeginForm("Authorize", "Login", null, new AjaxOptions { HttpMethod = "POST", OnBegin = "onSubmitLoginBegin", OnSuccess = "onSubmitLoginSuccess", OnFailure = "onSubmitLoginFail" }, new { @class = "form-horizontal" }))
+        {*@
+            <div class="text-center">
+                <img src="~/Content/Images/Diamante.png" height="130" />
+            </div>
+            <div class="text-center">
+                <img src="~/Content/Images/logored.png" height="60" />
+            </div>
+            <div class="text-center">
+                @Html.TextBoxFor(m => m.Username, new { @id = "usrname", @required = "required", @class = "form-control", placeholder = "Username" })
+                @Html.PasswordFor(model => model.Password, new { @id = "passwrd", @required = "required", @class = "form-control", placeholder = "Password" })
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Login" id="xxLogin" class="btn btn-success btnLogin">
+                <span style="font-size:14px;color:red;">@message</span>
+            </div>
+        @*}*@
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" language="javascript" src="~/Scripts/memo/home.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            noBack();
+            window.onload = noBack;
+            window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+            window.onunload = function () { void (0) }
+        });
+        function noBack() { window.history.forward(); }
+    </script>
+}

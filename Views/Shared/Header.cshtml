@@ -1,0 +1,62 @@
+﻿@using System.Web.Optimization
+@{
+    var usr = HttpContext.Current.Session["user"].ToString();
+}
+
+<nav class="navbar navbar-expand-sm navbar-static-top justify-content-center" role="navigation" style="background-color:#dc3545;">
+    <div class="container-fluid">
+        <span class="navbar-brand brand-logo-small">
+            <img src="~/Content/Images/mlhuillier.png" height="40" />
+        </span>
+        
+        <ul class="nav navbar-nav pull-left user-logged-in nav-list">
+            <li>
+                <button onclick="location.href='@Url.Action("Memo","Memo")'" class="nav-buttons">
+                    Create Memo
+                </button>
+            </li>
+            <li>
+                <button onclick="location.href='@Url.Action("ViewRequests","Memo")'" class="nav-buttons">
+                    View Memo
+                </button>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav pull-right user-logged-in">
+            <li style="margin-top:15px;margin-right:7px;">
+                <label class="user-xxx"><i class="glyphicon glyphicon-user"></i> Hello, @usr !</label>
+            </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li style="margin-top: 7px;margin-right: 7px;">
+                <button data-toggle="modal" data-target=".logout-modal" class="form-control"
+                        style="color:black;text-decoration:none;color: white;
+                        text-decoration: none;
+                        box-shadow: inset 0 4px 16px rgba(0,0,0,.075);
+                        border-color: inherit;
+                        border: 0px;
+                        background: inherit;">
+                    Logout
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--Modal Popup-->
+<div class="modal fade logout-modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-disabler modal-color">
+                <h4 class="modal-title">Confirmation Message</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center"><b style="color:red">Are you sure you want to Logout ?</b></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-red" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger btn-success" id="btnLogout" onclick="location.href='@Url.Action("Logoff","Login")'">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Modal-->

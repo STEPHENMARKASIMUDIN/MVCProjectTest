@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\DebitCreditMemo</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="bin/DebitCreditMemo.dll">
+      <publishTime>02/21/2020 14:25:51</publishTime>
+    </File>
+    <File Include="bin/DebitCreditMemo.XmlSerializers.dll">
+      <publishTime>02/21/2020 13:58:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/11/2019 08:39:01</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>07/11/2019 08:39:01</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>02/05/2016 13:45:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>07/11/2019 08:39:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>07/11/2019 08:39:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>07/11/2019 08:39:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>07/11/2019 08:39:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>07/11/2019 08:39:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>07/11/2019 08:39:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>07/11/2019 08:39:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/11/2019 08:38:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/11/2019 08:39:00</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>07/11/2019 08:39:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/11/2019 08:38:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/11/2019 08:38:57</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.css.map">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.min.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.standalone.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.standalone.css.map">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker.standalone.min.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.css.map">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.min.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.standalone.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.standalone.css.map">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.standalone.min.css">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Content/dataTable.min.css">
+      <publishTime>11/25/2019 16:53:28</publishTime>
+    </File>
+    <File Include="Content/dataTables.bootstrap4.min.css">
+      <publishTime>11/25/2019 14:55:21</publishTime>
+    </File>
+    <File Include="Content/Images/back_disabled.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/back_enabled.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/back_enabled_hover.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/Diamante.png">
+      <publishTime>02/17/2017 14:19:03</publishTime>
+    </File>
+    <File Include="Content/Images/favicon.ico">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/favicon.png">
+      <publishTime>11/21/2019 14:36:38</publishTime>
+    </File>
+    <File Include="Content/Images/forward_disabled.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/forward_enabled.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/forward_enabled_hover.png">
+      <publishTime>11/25/2019 13:59:55</publishTime>
+    </File>
+    <File Include="Content/Images/logored.png">
+      <publishTime>02/17/2017 17:47:27</publishTime>
+    </File>
+    <File Include="Content/Images/mirrored_squares.png">
+      <publishTime>02/05/2017 15:32:19</publishTime>
+    </File>
+    <File Include="Content/Images/mlhuillier.png">
+      <publishTime>01/30/2019 11:36:30</publishTime>
+    </File>
+    <File Include="Content/Images/sandpaper.png">
+      <publishTime>02/13/2017 14:12:37</publishTime>
+    </File>
+    <File Include="Content/Images/Sorting icons.psd">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/sort_asc.png">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/sort_asc_disabled.png">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/sort_both.png">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/sort_desc.png">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/sort_desc_disabled.png">
+      <publishTime>11/25/2019 13:59:54</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_444444_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_555555_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_777620_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_777777_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_cc0000_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/ui-icons_ffffff_256x240.png">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/Images/wallet-upload-png.ico">
+      <publishTime>08/20/2018 13:37:03</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.css">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.structure.css">
+      <publishTime>11/19/2019 11:03:45</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.theme.css">
+      <publishTime>11/19/2019 11:03:44</publishTime>
+    </File>
+    <File Include="Content/jquery.dataTables.min.css">
+      <publishTime>11/25/2019 13:59:56</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/16/2019 16:05:57</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/11/2019 08:38:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/11/2019 08:38:52</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/25/2019 16:28:36</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datepicker.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datepicker.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/19/2019 10:58:24</publishTime>
+    </File>
+    <File Include="Scripts/dataTable.min.js">
+      <publishTime>11/25/2019 16:31:02</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.min.js">
+      <publishTime>11/25/2019 14:56:38</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.js">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.min.js">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.min.map">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.slim.js">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.slim.min.js">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.0.0.slim.min.map">
+      <publishTime>11/19/2019 10:48:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>11/19/2019 11:03:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.js">
+      <publishTime>11/25/2019 13:59:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>11/25/2019 13:59:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>11/18/2019 09:54:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>11/18/2019 09:54:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>11/19/2019 11:15:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/19/2019 11:15:09</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker-en-CA.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ar-tn.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ar.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.az.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.bg.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.bn.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.br.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.bs.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ca.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.cs.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.cy.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.da.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.de.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.el.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-AU.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-CA.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-GB.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-IE.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-NZ.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.en-ZA.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.eo.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.es.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.et.min.js">
+      <publishTime>11/12/2019 10:27:45</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.eu.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.fa.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.fi.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.fo.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.fr-CH.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.fr.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.gl.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.he.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.hi.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.hr.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.hu.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.hy.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.id.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.is.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.it-CH.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.it.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ja.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ka.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.kh.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.kk.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.km.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ko.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.kr.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.lt.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.lv.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.me.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.mk.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.mn.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ms.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.nl-BE.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.nl.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.no.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.oc.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.pl.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.pt-BR.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.pt.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ro.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.rs-latin.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.rs.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ru.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.si.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sk.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sl.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sq.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sr-latin.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sr.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sv.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.sw.min.js">
+      <publishTime>11/12/2019 10:27:44</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.ta.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.tg.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.th.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.tk.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.tr.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.uk.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.uz-cyrl.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.uz-latn.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.vi.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.zh-CN.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/locales/bootstrap-datepicker.zh-TW.min.js">
+      <publishTime>11/12/2019 10:27:43</publishTime>
+    </File>
+    <File Include="Scripts/memo/home.js">
+      <publishTime>02/21/2020 13:32:58</publishTime>
+    </File>
+    <File Include="Scripts/memo/memodetails.js">
+      <publishTime>11/26/2019 09:40:36</publishTime>
+    </File>
+    <File Include="Scripts/mljs/globaljs.js">
+      <publishTime>10/12/2019 11:48:07</publishTime>
+    </File>
+    <File Include="Scripts/mljs/login.js">
+      <publishTime>11/18/2019 10:17:05</publishTime>
+    </File>
+    <File Include="Scripts/mljs/saving.js">
+      <publishTime>08/11/2019 09:25:01</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>07/11/2019 08:38:58</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>07/11/2019 08:38:59</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>01/29/2020 10:34:42</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.KYCCleanUpLoginInfo.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.KYCCleanUpLoginResponse.datasource">
+      <publishTime>11/09/2019 09:10:29</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.MLDirectoryLoginHOResponse.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.MLDirectoryLogInInfo.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.MLDirectoryLoginResponse.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.NonPOLoginEVPResponse.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.NonPOLogInInfo.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.NonPOLoginResponse.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.POLogInInfo.datasource">
+      <publishTime>11/09/2019 09:10:27</publishTime>
+    </File>
+    <File Include="Service References/LoginService/DebitCreditMemo.LoginService.POLoginResponse.datasource">
+      <publishTime>11/09/2019 09:10:28</publishTime>
+    </File>
+    <File Include="Views/Login/Login.cshtml">
+      <publishTime>11/28/2019 10:45:25</publishTime>
+    </File>
+    <File Include="Views/Login/_LoginLayout.cshtml">
+      <publishTime>11/28/2019 11:00:32</publishTime>
+    </File>
+    <File Include="Views/Memo/ErrorPage.cshtml">
+      <publishTime>11/21/2019 14:33:50</publishTime>
+    </File>
+    <File Include="Views/Memo/Memo.cshtml">
+      <publishTime>02/21/2020 13:56:56</publishTime>
+    </File>
+    <File Include="Views/Memo/MemoDetails.cshtml">
+      <publishTime>12/16/2019 16:06:45</publishTime>
+    </File>
+    <File Include="Views/Memo/ViewMemoDetails.cshtml">
+      <publishTime>12/16/2019 16:07:11</publishTime>
+    </File>
+    <File Include="Views/Memo/ViewRequests.cshtml">
+      <publishTime>11/12/2019 08:37:51</publishTime>
+    </File>
+    <File Include="Views/Memo/_ApproverLayout.cshtml">
+      <publishTime>11/28/2019 11:00:23</publishTime>
+    </File>
+    <File Include="Views/Memo/_HomeLayout.cshtml">
+      <publishTime>10/12/2019 11:48:15</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>07/11/2019 08:39:01</publishTime>
+    </File>
+    <File Include="Views/Shared/Header.cshtml">
+      <publishTime>02/21/2020 13:47:19</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/21/2020 13:44:04</publishTime>
+    </File>
+    <File Include="Views/Shared/_Loader.cshtml">
+      <publishTime>12/16/2019 16:13:07</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>11/21/2019 14:39:56</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/11/2019 08:38:52</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/11/2019 08:38:52</publishTime>
+    </File>
+    <File Include="Web References/LoginService/KYCCleanUpLoginInfo.datasource">
+      <publishTime>02/21/2020 10:55:24</publishTime>
+    </File>
+    <File Include="Web References/LoginService/MLDirectoryLogInInfo.datasource">
+      <publishTime>02/21/2020 10:55:24</publishTime>
+    </File>
+    <File Include="Web References/LoginService/NonPOLogInInfo.datasource">
+      <publishTime>02/21/2020 10:55:24</publishTime>
+    </File>
+    <File Include="Web References/LoginService/POLogInInfo.datasource">
+      <publishTime>02/21/2020 10:55:24</publishTime>
+    </File>
+    <File Include="Web References/LoginService/Reference.map">
+      <publishTime>02/21/2020 10:55:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/21/2020 13:58:28</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

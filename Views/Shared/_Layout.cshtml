@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="shortcut icon" href="~/Content/Images/favicon.png" />
+    <script type="text/javascript">
+        var Url = '@Request.ApplicationPath';
+        if (Url == '/DebitCreditMemo') {
+            Url = '/DebitCreditMemo/';
+        } else {
+            Url = "";
+        }
+    </script>
+</head>
+<body>
+    @Html.Partial("Header")
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <!--Modal Animated Loading...-->
+    <div class="modal fade my-modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                    Processing...
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal-->
+
+    <!--Modal Notification-->
+    <div class="modal fade modal-Notification" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-disabler modal-color">
+                    <h4 class="modal-title KYC-font">Confirmation Message</h4>
+                </div>
+                <div class="modal-body">
+                    <div style="text-align:center"><b style="color:red"><span id="webErrorMSG"></span></b></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-red" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal-->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("styleCss", required: false)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

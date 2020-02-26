@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.title</title>
+    <link rel="shortcut icon" href="~/Content/Images/favicon.png" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="overflow:hidden">
+    <nav class="navbar navbar-expand-sm navbar-static-top justify-content-center" role="navigation" style="background-color:#dc3545;">
+        <div class="container-fluid">
+            <span class="navbar-brand brand-logo-small">
+                <img src="~/Content/Images/mlhuillier.png" height="40" />
+            </span>
+            <ul class="nav navbar-nav pull-right user-logged-in">
+                <li style="margin-top: 7px;margin-right: 7px;">
+                    <button onclick="location.href='@Url.Action("Login","Login")'" class="form-control"
+                            style="font-weight:bold;color: white;
+                        text-decoration: none;
+                        box-shadow: inset 0 4px 16px rgba(0,0,0,.075);
+                        border-color: inherit;
+                        border: 0px;
+                        background: inherit;">
+                        LOGIN
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    @Html.Partial("_Loader")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("styleCss", required: false)
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript" language="javascript">
+        // Disable back button in login
+        var _0xee57 = [
+            "\x68\x72\x65\x66",
+            "\x70\x75\x73\x68\x53\x74\x61\x74\x65",
+            "\x6F\x6E\x70\x6F\x70\x73\x74\x61\x74\x65",
+            "\x67\x6F"
+        ];
+
+        history[_0xee57[1]](null, null, location[_0xee57[0]]);
+        window[_0xee57[2]] = function () {
+            history[_0xee57[3]](1)
+        }
+    </script>
+</body>
+</html>

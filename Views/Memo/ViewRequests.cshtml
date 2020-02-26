@@ -1,0 +1,58 @@
+﻿@model DebitCreditMemo.Models.CreateResponse
+@{
+    ViewBag.Title = "Requests";
+    Layout = "~/Views/Memo/_HomeLayout.cshtml";
+}
+
+<body>
+    <div class="container table-responsive" style="overflow-x:auto;padding: 14px;background-color:white">
+        <table id="tbl" class="display table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th></th>
+                    <th>Memo Series</th>
+                    <th>IR Number</th>
+                    <th>TransType</th>
+                    <th>Wallet User</th>
+                    <th>Creator</th>
+                    <th>Date Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var details in Model.RequestList) {
+                    <tr>
+                        <td style="padding:3px;width:8%;"><button class="form-control btn-info" onclick="location.href='@Url.Action("ViewMemoDetails", "Memo", new { memoseries = details.MemoSeries , status = details.Status })'">Select</button></td>
+                        <td>@details.MemoSeries</td>
+                        <td>@details.IRNumber</td>
+                        <td>@details.TransactionType</td>
+                        <td>@details.WalletUser</td>
+                        <td>@details.OperatorName</td>
+                        <td>@details.Created_at</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+@section styleCss{
+    <link href="~/Content/dataTable.min.css" rel="stylesheet" />
+}
+@section scripts {
+    <script type="text/javascript" language="javascript" src="~/Scripts/dataTable.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tbl').DataTable({
+                sorting: false,
+                lengthChange: false,
+                retrieve: true,
+                lengthMenu: [10],
+                order: [[0, "desc"]],
+                "bSort": false
+            });
+        })
+    </script>
+}
+
+

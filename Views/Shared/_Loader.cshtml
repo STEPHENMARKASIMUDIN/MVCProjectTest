@@ -1,0 +1,58 @@
+﻿<div class="modal fade modal-inactivity" data-backdrop="static" data-keyboard="false" style="z-index:1041;">
+    <div class="modal-dialog modal-custom" style="width:35%;min-width:35%;">
+        <div class="modal-content">
+            <div class="modal-header border-disabler">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p class="l-fontsize14">Your session has expired due to an extended period of inactivity.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="form-control-static" style="float:right;padding:0;margin:0;margin-top:-12px;margin-bottom:-13px;">
+                    <input type="button" value="Back to login" class="btn btn-sm btn-success btn-danger" onclick="location.href='@Url.Action("Logout","Userlogin")'" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<center>
+    @*<div class="modal fade my-modal loader" data-backdrop="static" data-keyboard="false" style="display:none;overflow:no-display ;">
+        <div class="modal-dialog modal-sm" style="width:130px;">
+            <div class="modal-content" style="overflow:hidden;">
+                <div class="modal-body pull-left msg" style="border-radius:2px;">
+                    &nbsp;&nbsp;<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate "></span>
+                    &nbsp;Loading..
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <div class="modal fade loader" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="width:50%;">
+                <div class="modal-body" style="padding:0px;">
+                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                    <label style="font-weight:100;">Loading...</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+<div id="respmodal" class="modal fade modal-popup" data-backdrop="static" data-keyboard="false" style="display:none;overflow:no-display">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content col-md-7" style="margin-left:22.5%;">
+            <div class="modal-header">
+                <h6 class="modal-title" id="myModalLabel" style="margin-left: -11px;"><b>SYSTEM MESSAGE</b></h6>
+                <button type="button" class="close pad-13" style="margin-top:-23px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body borderless" id="respmessage">
+            </div>
+            <div class="modal-footer pad-7">
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" id="btnOk">
+                    <span class="glyphicon glyphicon-ok"></span> OK
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

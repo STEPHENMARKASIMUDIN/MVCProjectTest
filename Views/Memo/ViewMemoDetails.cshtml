@@ -1,0 +1,264 @@
+﻿@using System.Web.Optimization
+@using System.ComponentModel.DataAnnotations
+@model DebitCreditMemo.Models.HomeViewModel
+@{
+    ViewBag.Title = "MemoDetails";
+    Layout = "~/Views/Memo/_HomeLayout.cshtml";
+    var xxmemo = Session["RequestDetailsX"] as DebitCreditMemo.Models.CreateResponse;
+}
+
+<div class=" container">
+    <div class="row">
+        <div class="col">
+            <div class="card-2 border-0">
+                <div style="text-align:center;background:#e05260;padding:2px;">
+                    <h4 style="font-weight:bolder;color:white">DEBIT/CREDIT MEMO</h4>
+                </div>
+                <div class="pad-7">
+                    <input value=@xxmemo.details.OperatorName id="opname" name="opname" hidden />
+                    <input value=@xxmemo.SignatoryList[0].Name id="level1" name="level1" hidden />
+                    <input value=@xxmemo.SignatoryList[1].Name id="level2" name="level2" hidden />
+                    <input value=@xxmemo.SignatoryList[2].Name id="level3" name="level3" hidden />
+                    <table class="table table-borderless table-sm">
+                        <tr>
+                            <td class="pad-right" style="width: 1px">@Html.LabelFor(m => m.date, new { @class = "form-control form-v2 pad-right" })</td>
+                            <td class="pad-left" style="width: 22%">@Html.TextBoxFor(m => m.date, new { @id = "txtdate", @readonly = "readonly", @required = "required", @max = "2999-12-31", @class = "form-control form-control-sm ml-2 pad-left", @Value = @xxmemo.details.Created_at })</td>
+                            <td class="float-right text-right pad-right">@Html.LabelFor(m => m.DebtCredNo, new { @class = "form-control form-v2 pad-right" })</td>
+                            <td class="pad-left" style="width:40%;">@Html.TextBoxFor(m => m.DebtCredNo, new { @id = "txtDebitCredit", @readonly = "readonly", @required = "required", @class = "form-control form-control-sm ml-2 pad-left", @Value = @xxmemo.details.DebtCredNo })</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-right pad-right" style="border-top:0px;">@Html.LabelFor(m => m.IRNo, new { @class = "form-control form-v2 pad-right" })</td>
+                            <td style="border-top:0px;">@Html.TextBoxFor(m => m.IRNo, new { @id = "IRNo", @required = "required", @class = "form-control form-control-sm ml-2 pad-left", @Value = @xxmemo.details.IRNo, @disabled = "disabled" })</td>
+                        </tr>
+                    </table>
+                    <input id="transtype" value=@xxmemo.details.DebitCredit hidden />
+                    <table class="table table-sm table-borderless bottom">
+                        <tr>
+                            <td style="width: 120px;">
+                                <table class="table bottom">
+                                    <tr>
+                                        <td style="width: 1%;border: 1px solid black;border-right: 0px;">
+                                            @if (xxmemo.details.DebitCredit.Trim().ToUpper() == "Debit") {@Html.RadioButtonFor(m => m.DebitCredit, "Debit", new { @required = "required", @class = "form-control-sm", @id = "chkDebit", @name = "Debit/Credit", @disabled = "disabled", @checked = "checked" })}
+                                            else {@Html.RadioButtonFor(m => m.DebitCredit, "Debit", new { @required = "required", @class = "form-control-sm", @id = "chkDebit", @name = "Debit/Credit", @disabled = "disabled" })}
+                                        </td>
+                                        <td style="border: 1px solid black;border-left: 0px;">@Html.Label("chkDebit", "Debit", new { @readonly = "readonly" })</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black;border-right: 0px;">
+                                            @if (xxmemo.details.DebitCredit.Trim().ToUpper() == "Credit") {@Html.RadioButtonFor(m => m.DebitCredit, "Credit", new { @required = "required", @class = "form-control-sm", @id = "chkCredit", @name = "Debit/Credit", @disabled = "disabled", @checked = "checked" })}
+                                            else {@Html.RadioButtonFor(m => m.DebitCredit, "Credit", new { @required = "required", @class = "form-control-sm", @id = "chkCredit", @name = "Debit/Credit", @disabled = "disabled" })}
+                                        </td>
+                                        <td style="border: 1px solid black;border-left: 0px;">@Html.Label("chkCredit", "Credit", new { @readonly = "readonly" })</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table bottom">
+                                    <thead>
+                                        <tr>
+                                            <th style="font-size: 14px;border: 1px solid black;">Reason For Adjustment</th>
+                                            <th style="font-size: 14px;border: 1px solid black;">Transaction Date</th>
+                                            <th style="font-size: 14px;width: 35%;text-align:center;border: 1px solid black;">KPTN / Ref #</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            @if (xxmemo.details.WrongAmount == true) {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.WrongAmount, new { @id = "WrongAmount", @disabled = "disabled", @Value = "true", @checked = "checked" })&nbsp;&nbsp;Wrong Amount (overstated/understated)</td>
+                                                <td style="border: 1px solid black;">
+                                                    @Html.TextBoxFor(m => m.TransactionDate1, new { @id = "txtTransactionDate1", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled", @Value = xxmemo.details.TransactionDate1 })
+                                                </td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno1, new { @id = "txtrefno1", @class = "form-control form-control-sm", @disabled = "disabled", @Value = @xxmemo.details.refno1 })</td>
+                                            }
+                                            else {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.WrongAmount, new { @id = "WrongAmount", @disabled = "disabled" })&nbsp;&nbsp;Wrong Amount (overstated/understated)</td>
+                                                <td style="border: 1px solid black;">
+                                                    @Html.TextBoxFor(m => m.TransactionDate1, new { @id = "txtTransactionDate1", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled" })
+                                                </td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno1, new { @id = "txtrefno1", @class = "form-control form-control-sm", @disabled = "disabled" })</td>
+                                            }
+                                        </tr>
+                                        <tr>
+                                            @if (xxmemo.details.Erroneous == true) {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.Erroneous, new { @id = "Erroneous", @Value = "true", @disabled = "disabled", @checked = "checked" })&nbsp;&nbsp;Erroneous Loading (wrong receiver)</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.TransactionDate2, new { @id = "txtTransactionDate2", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled", @Value = xxmemo.details.TransactionDate2 })</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno2, new { @id = "txtrefno2", @class = "form-control form-control-sm", @disabled = "disabled", @Value = @xxmemo.details.refno2 })</td>
+                                            }
+                                            else {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.Erroneous, new { @id = "Erroneous", @disabled = "disabled" })&nbsp;&nbsp;Erroneous Loading (wrong receiver)</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.TransactionDate2, new { @id = "txtTransactionDate2", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled" })</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno2, new { @id = "txtrefno2", @class = "form-control form-control-sm", @disabled = "disabled" })</td>
+                                            }
+                                        </tr>
+                                        <tr>
+                                            @if (xxmemo.details.SystemError == true) {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.SystemError, new { @id = "SystemError", @disabled = "disabled", @checked = "checked", @Value = "true" })&nbsp;&nbsp;System Error (Unposted, Wallet discrepancy, Double Posting)</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.TransactionDate3, new { @id = "txtTransactionDate3", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled", @Value = xxmemo.details.TransactionDate3 })</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno3, new { @id = "txtrefno3", @class = "form-control form-control-sm", @disabled = "disabled", @Value = @xxmemo.details.refno3 })</td>
+                                            }
+                                            else {
+                                                <td style="border: 1px solid black;">@Html.CheckBoxFor(m => m.SystemError, new { @id = "SystemError", @disabled = "disabled" })&nbsp;&nbsp;System Error (Unposted, Wallet discrepancy, Double Posting)</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.TransactionDate3, new { @id = "txtTransactionDate3", @class = "form-control form-control-sm datepicker", @placeholder = "mm/dd/yyyy", @maxLength = "10", @disabled = "disabled" })</td>
+                                                <td style="border: 1px solid black;">@Html.TextBoxFor(m => m.refno3, new { @id = "txtrefno3", @class = "form-control form-control-sm", @disabled = "disabled" })</td>
+                                            }
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="bottom" />
+                    <table class="table table-sm table-borderless bottom">
+                        <tr>
+                            <td style="padding:12px;width: 21%; border-top:0px;text-align:right">@Html.LabelFor(m => m.WalletUser)</td>
+                            <td style="border-top: 0px;" colspan="3">@Html.TextBoxFor(m => m.WalletUser, new { @readonly = "readonly", @id = "txtwalletuser", @required = "required", @class = "form-control form-control-sm ml-2", @Value = @xxmemo.details.WalletUser })</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:12px;border-top:0px;text-align:right">@Html.LabelFor(m => m.WalletID)</td>
+                            <td style="border-top:0px;">@Html.TextBoxFor(m => m.WalletID, new { @readonly = "readonly", @id = "txtwalletID", @required = "required", @class = "form-control form-control-sm ml-2", @Value = @xxmemo.details.WalletID })</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:12px;border-top:0px;text-align:right">@Html.LabelFor(m => m.IncorrectAmount)</td>
+                            <td style="border-top:0px;">@Html.TextBoxFor(m => m.IncorrectAmount, new { @readonly = "readonly", @id = "txtincorrect", @required = "required", @class = "form-control form-control-sm ml-2", @Value = @xxmemo.details.IncorrectAmount })</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:12px;border-top:0px;text-align:right">@Html.LabelFor(m => m.CorrectAmount)</td>
+                            <td style="border-top:0px;">@Html.TextBoxFor(m => m.CorrectAmount, new { @readonly = "readonly", @id = "txtcorrect", @required = "required", @class = "form-control form-control-sm ml-2", @Value = @xxmemo.details.CorrectAmount })</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:12px;border-top:0px;text-align:right">@Html.LabelFor(m => m.AdjustAmount)</td>
+                            <td style="border-top:0px;">@Html.TextBoxFor(m => m.AdjustAmount, new { @readonly = "readonly", @id = "txtadjust", @required = "required", @class = "form-control form-control-sm ml-2", @Value = @xxmemo.details.AdjustAmount })</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:0px;text-align:right">@Html.LabelFor(m => m.File)</td>
+                            <td style="border-top:0px;">
+                                <input type="file" class="form-control form-control-sm ml-2 box-shdw" id="attachment" accept=".doc,.docx,.pdf" style="display:none;" disabled />
+                                @*<label for="file">@xxmemo.details.File</label>*@
+                                @*<input id="fileBase64" name="fileBase64" value="" hidden />*@
+                                <input id="filetype" value="@xxmemo.details.FileType" hidden/>
+                                <button type="button" value="@xxmemo.details.FileValue" id="fileDownload" class="fileDownload" name="@xxmemo.details.File">@xxmemo.details.File</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+                    <table class="table table-sm">
+                        <tr>
+                            <td class="CADnames pt-3" style="border: 1px solid black;width: 50%;">
+                                <label class="prepBy" style="font-weight:bold;font-style:italic;">WITH ELECTRONIC APPROVAL &nbsp;&nbsp; @xxmemo.details.Created_at</label>
+                                <br />Prepared by: <label id="levels">@xxmemo.details.OperatorName</label>
+                            </td>
+                            <td class="CADnames pt-3" style="border: 1px solid black;">
+                                @if (String.IsNullOrEmpty(xxmemo.MemoRequestDetails.NotedBy)) { <label class="notedBy" style="font-weight:bold;font-style:italic;" hidden>With electronic approval</label>}
+                                else { <label class="notedBy" style="font-weight:bold;font-style:italic;">WITH ELECTRONIC APPROVAL &nbsp;&nbsp; @xxmemo.details.Noted_at</label>}
+                                <br />Noted by: <label id="levels">@xxmemo.SignatoryList[0].Name</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CADposition" style="border: 1px solid black;">CAD Personnel</td>
+                            <td class="CADposition" style="border: 1px solid black;">CAD-Division Manager</td>
+                        </tr>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td class="CADnames pt-3" style="border: 1px solid black;width: 50%;">
+                                @if (String.IsNullOrEmpty(xxmemo.MemoRequestDetails.Auditedby)) {
+                                    <label class="auditBy" style="font-weight:bold;font-style:italic;" hidden>With electronic approval</label>
+                                }
+                                else {
+                                    <label class="auditBy" style="font-weight:bold;font-style:italic;">WITH ELECTRONIC APPROVAL &nbsp;&nbsp; @xxmemo.details.Audited_at</label>
+                                }
+                                <br />Audited by: <label id="levels">@xxmemo.SignatoryList[1].Name</label>
+                            </td>
+                            <td class="CADnames pt-3" style="border: 1px solid black;">
+                                @if (String.IsNullOrEmpty(xxmemo.MemoRequestDetails.ReceivedBy)) { <label class="financeBy" style="font-weight:bold;font-style:italic;" hidden>With electronic approval</label> }
+                                else { <label class="financeBy" style="font-weight:bold;font-style:italic;">WITH ELECTRONIC APPROVAL &nbsp;&nbsp; @xxmemo.details.Received_at</label>}
+                                <br />Received by: <label id="levels">@xxmemo.SignatoryList[2].Name</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CADposition" style="border: 1px solid black;">Internal Audit Division (Signature over Printed Name)</td>
+                            <td class="CADposition" style="border: 1px solid black;">Finance Division (Signature over Printed Name)</td>
+                        </tr>
+                    </table>
+                    <div style="margin-bottom: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" language="javascript" src="~/Scripts/memo/memodetails.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            var type = $('#transtype').val();
+            if (type == "Debit") {
+                $('#chkDebit').prop("checked", "checked");
+            }
+            else if (type == "Credit") {
+                $('#chkCredit').prop("checked", "checked");
+            }
+
+            var txtdate = document.getElementById("txtdate").value;
+            var DateSplit = txtdate.split('/');
+            var month = DateSplit[0];
+            var monthWord;
+            if (month === '01') {
+                monthWord = "January";
+            }
+            else if (month === '02') {
+                monthWord = "Febuary";
+            }
+            else if (month === '03') {
+                monthWord = "March";
+            }
+            else if (month === '04') {
+                monthWord = "April";
+            }
+            else if (month === '05') {
+                monthWord = "May";
+            }
+            else if (month === '06') {
+                monthWord = "June";
+            }
+            else if (month === '07') {
+                monthWord = "July";
+            }
+            else if (month === '08') {
+                monthWord = "August";
+            }
+            else if (month === '09') {
+                monthWord = "September";
+            }
+            else if (month === '10') {
+                monthWord = "October";
+            }
+            else if (month === '11') {
+                monthWord = "November";
+            }
+            else if (month === '12') {
+                monthWord = "December";
+            }
+
+            var finalDate = monthWord + " " + DateSplit[1] + "," + DateSplit[2];
+            document.getElementById("txtdate").value = finalDate;
+
+            document.getElementById('fileDownload').onclick = function () {
+                var a = document.createElement('a');
+                var downlink = document.getElementById('fileDownload').value;
+                var downName = document.getElementById('fileDownload').name;
+                var downType = document.getElementById('filetype').value;
+                a.href = downType + downlink;
+                a.download = downName;
+
+                if (downName !== "No file attached.") {
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            }
+        });
+    </script>
+}
